@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
-import { useState } from "react";
 
 const Header = () => {
   /* Toggle Menu */
-  const [Toggle, showMenu] = useState(false);
+  const [toggle, showMenu] = useState(false);
+  const [activeLink, setActiveLink] = useState("#home");
+
+  const handleLinkClick = (e) => {
+    // Mengambil href dari link yang diklik
+    const href = e.target.getAttribute("href");
+    // Set activeLink menjadi href dari link yang diklik
+    setActiveLink(href);
+  };
+
   return (
     <header className="header">
       <nav className="nav container">
@@ -12,34 +20,64 @@ const Header = () => {
           LuBlanc
         </a>
 
-        <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
+        <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
             <li className="nav__item">
-              <a href="#home" className="nav__link active-link">
+              <a
+                href="#home"
+                className={`nav__link ${
+                  activeLink === "#home" ? "active-link" : ""
+                }`}
+                onClick={handleLinkClick}
+              >
                 <i className="uil uil-estate nav__icon"></i> Home
               </a>
             </li>
 
             <li className="nav__item">
-              <a href="#about" className="nav__link">
+              <a
+                href="#about"
+                className={`nav__link ${
+                  activeLink === "#about" ? "active-link" : ""
+                }`}
+                onClick={handleLinkClick}
+              >
                 <i className="uil uil-user nav__icon"></i> About
               </a>
             </li>
 
             <li className="nav__item">
-              <a href="#skills" className="nav__link">
+              <a
+                href="#skills"
+                className={`nav__link ${
+                  activeLink === "#skills" ? "active-link" : ""
+                }`}
+                onClick={handleLinkClick}
+              >
                 <i className="uil uil-file-alt nav__icon"></i> Skills
               </a>
             </li>
 
             <li className="nav__item">
-              <a href="#work" className="nav__link">
+              <a
+                href="#work"
+                className={`nav__link ${
+                  activeLink === "#work" ? "active-link" : ""
+                }`}
+                onClick={handleLinkClick}
+              >
                 <i className="uil uil-scenery nav__icon"></i> Work
               </a>
             </li>
 
             <li className="nav__item">
-              <a href="#contact" className="nav__link">
+              <a
+                href="#contact"
+                className={`nav__link ${
+                  activeLink === "#contact" ? "active-link" : ""
+                }`}
+                onClick={handleLinkClick}
+              >
                 <i className="uil uil-message nav__icon"></i> Contact
               </a>
             </li>
@@ -47,12 +85,12 @@ const Header = () => {
 
           <i
             className="uil uil-times nav__close"
-            onClick={() => showMenu(!Toggle)}
+            onClick={() => showMenu(!toggle)}
           ></i>
         </div>
 
-        <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
-          <i class="uil uil-apps"></i>
+        <div className="nav__toggle" onClick={() => showMenu(!toggle)}>
+          <i className="uil uil-apps"></i>
         </div>
       </nav>
     </header>

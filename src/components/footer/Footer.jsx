@@ -24,6 +24,7 @@ const Footer = () => {
             href="https://www.instagram.com/lulufah_"
             className="footer__social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i class="bx bxl-instagram"></i>
           </a>
@@ -32,6 +33,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/fahrul-lah-860931272/"
             className="footer__social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i class="bx bxl-linkedin"></i>
           </a>
@@ -40,6 +42,7 @@ const Footer = () => {
             href="https://github.com/Lu-Blanc"
             className="footer__social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i class="bx bxl-github"></i>
           </a>

@@ -7,6 +7,9 @@ const Social = () => {
         href="https://www.instagram.com/lulufah_/"
         className="home__social"
         target="_blank"
+
+        // penggunaan ini agak mencegah terjadinya phising
+        rel="noreferrer"
       >
         <i class="uil uil-instagram"></i>
       </a>
@@ -15,6 +18,7 @@ const Social = () => {
         href="https://www.linkedin.com/in/fahrul-lah-860931272/"
         className="home__social"
         target="_blank"
+        rel="noreferrer"
       >
         <i class="uil uil-linkedin-alt"></i>
       </a>
@@ -23,6 +27,7 @@ const Social = () => {
         href="https://github.com/Lu-Blanc"
         className="home__social"
         target="_blank"
+        rel="noreferrer"
       >
         <i class="uil uil-github-alt"></i>
       </a>

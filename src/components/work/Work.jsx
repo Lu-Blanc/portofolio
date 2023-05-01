@@ -21,6 +21,7 @@ const Work = () => {
             href="https://github.com/Lu-Blanc/LoginFull"
             className="work__social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i class="bx bxl-github"></i>
           </a>
@@ -36,6 +37,7 @@ const Work = () => {
             href="https://github.com/Lu-Blanc/SearchApiOnline"
             className="work__social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i class="bx bxl-github"></i>
           </a>
@@ -51,6 +53,7 @@ const Work = () => {
             href="https://github.com/Lu-Blanc/website-kopi"
             className="work__social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i class="bx bxl-github"></i>
           </a>
